@@ -5,7 +5,7 @@ import { getUserBySessionToken } from '../db/user';
 
 export const isAuthenticated = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     try {
-        const sessionToken = req.cookies['AUTH'];
+        const sessionToken = req.cookies['Auth'];
 
         if (!sessionToken) {
             return res.sendStatus(403);
